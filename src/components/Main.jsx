@@ -25,13 +25,13 @@ export class Main extends Component {
   };
 
   appleAdd = value => {
-    if (value > 0) {
+    if (value >= 0) {
       let applePrice = value * 10;
 
       const { userValue, orangePrice, bananaPrice } = this.state;
       let total = orangePrice + applePrice + bananaPrice;
 
-      if (userValue > total) {
+      if (userValue >= total) {
         this.setState({
           applePrice: applePrice,
           totalPrice: total
@@ -42,13 +42,13 @@ export class Main extends Component {
     }
   };
   orangeAdd = value => {
-    if (value > 0) {
+    if (value >= 0) {
       let orangePrice = value * 20;
 
       const { userValue, applePrice, bananaPrice } = this.state;
       let total = orangePrice + applePrice + bananaPrice;
 
-      if (userValue > total) {
+      if (userValue >= total) {
         this.setState({
           orangePrice: orangePrice,
           totalPrice: total
@@ -59,13 +59,13 @@ export class Main extends Component {
     }
   };
   bananaAdd = value => {
-    if (value > 0) {
+    if (value >= 0) {
       let bananaPrice = value * 15;
 
       const { userValue, applePrice, orangePrice } = this.state;
       let total = bananaPrice + applePrice + orangePrice;
 
-      if (userValue > total) {
+      if (userValue >= total) {
         this.setState({
           bananaPrice: bananaPrice,
           totalPrice: total
